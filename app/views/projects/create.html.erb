@@ -1,0 +1,21 @@
+<% if @project.errors.any? %>
+   <div id="create_posts">
+       <h2>
+          Errores Encontrados <%= pluralize(@project.errors.count, "") %>
+          <br>
+          <br>
+          No se puede guardar el registro ... Que penita...
+        </h2>
+        <ul>
+           <% @project.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+<% else %>
+   <h1>Registro exitoso...</h1>
+   <h2>Felicitaciones...</h2>
+<% end %>
+
+<button type="button"><%= link_to "Volver", :back %> </button>
+<button type="button"><%= link_to "Ir al Dashboard", root_path %></button>

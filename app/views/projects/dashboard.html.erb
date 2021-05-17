@@ -1,0 +1,111 @@
+<h1>Dashboard de Proyectos</h1>
+<br>
+   <%= link_to "Crear nuevo", projects_new_path %>
+<hr>
+<br>
+
+
+
+
+
+
+
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Todos')">Todos</button>
+  <button class="tablinks" onclick="openCity(event, 'propuesta')">Propuesta</button>
+  <button class="tablinks" onclick="openCity(event, 'enprogreso')">En Progreso</button>
+  <button class="tablinks" onclick="openCity(event, 'terminado')">Terminado</button>
+</div>
+
+
+
+
+<!-- Tab content -->
+<div id="Todos" class="tabcontent">
+  <table>
+<tr>
+   <th>Nombre</th>
+   <th>Descripcion</th>
+   <th>Fecha de Inicio</th>
+   <th>Fecha de Termino</th>
+   <th>Estado</th>
+</tr>
+
+<% @projects.each do |project| %>
+   <tr>
+      <td><%= project.name %></td>
+      <td>><%= project.description %></td>
+      <td>><%= project.begin.strftime("%d of %B, %Y") %></td>
+      <td>><%= project.end.strftime("%d of %B, %Y") %></td>
+      <td>><%= project.state %></td>
+   </tr>
+<% end %>
+</table>
+</div>
+
+<div id="propuesta" class="tabcontent">
+   <table>
+<tr>
+   <th>Nombre</th>
+   <th>Descripcion</th>
+   <th>Fecha de Inicio</th>
+   <th>Fecha de Termino</th>
+   <th>Estado</th>
+</tr>
+
+<% @projectspropuesta.each do |project| %>
+   <tr>
+      <td><%= project.name %></td>
+      <td>><%= project.description %></td>
+      <td>><%= project.begin.strftime("%d of %B, %Y") %></td>
+      <td>><%= project.end.strftime("%d of %B, %Y") %></td>
+      <td>><%= project.state %></td>
+   </tr>
+<% end %>
+</table>
+</div>
+
+<div id="enprogreso" class="tabcontent">
+   <table>
+<tr>
+   <th>Nombre</th>
+   <th>Descripcion</th>
+   <th>Fecha de Inicio</th>
+   <th>Fecha de Termino</th>
+   <th>Estado</th>
+</tr>
+
+<% @projectsenprogreso.each do |project| %>
+   <tr>
+      <td><%= project.name %></td>
+      <td>><%= project.description %></td>
+      <td>><%= project.begin.strftime("%d of %B, %Y") %></td>
+      <td>><%= project.end.strftime("%d of %B, %Y") %></td>
+      <td>><%= project.state %></td>
+   </tr>
+<% end %>
+</table>
+</div>
+
+<div id="terminado" class="tabcontent">
+   <table>
+<tr>
+   <th>Nombre</th>
+   <th>Descripcion</th>
+   <th>Fecha de Inicio</th>
+   <th>Fecha de Termino</th>
+   <th>Estado</th>
+</tr>
+
+<% @projectsterminado.each do |project| %>
+   <tr>
+      <td><%= project.name %></td>
+      <td>><%= project.description %></td>
+      <td>><%= project.begin.strftime("%d of %B, %Y") %></td>
+      <td>><%= project.end.strftime("%d of %B, %Y") %></td>
+      <td>><%= project.state %></td>
+   </tr>
+<% end %>
+</table>
+</div>

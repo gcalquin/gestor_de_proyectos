@@ -1,0 +1,28 @@
+<h1>Creador de Proyectos</h1>
+
+<% if notice %>
+   <%=notice %>
+<% end %>
+
+<form method="get" action="/projects/create">
+   <p>Nombre    : <input name="name"></p>
+   <p>Descripcion : <input name="description"></p>
+   <p>Fechas de inicio: <input type="date" name="begin"></p>
+   <p>Fechas de Termino: <input type="date" name="end"></p>
+   <p>Estado:</p>
+   <select id="state" name="state">
+    <option value="propuesta">Propuesta</option>
+    <option value="en progreso">En Progreso</option>
+    <option value="terminado">Terminado</option>
+  </select>
+  <br>
+    <br>
+
+<input type="submit" value="Enviar">
+
+</form>
+  <br>
+    <br>
+
+   <button type="button"><%= link_to "Ir al Dashboard", root_path %></button>
+
