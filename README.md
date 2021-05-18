@@ -1,5 +1,13 @@
 # README
 
+LINK HEROKU:
+
+https://gestorgcc.herokuapp.com/
+
+USER: desafiovamoscontodo
+PASSWORD:  XAHTJEAS23123%23
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
