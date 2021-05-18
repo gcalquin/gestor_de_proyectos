@@ -7,6 +7,17 @@ https://gestorgcc.herokuapp.com/
 USER: desafiovamoscontodo
 PASSWORD:  XAHTJEAS23123%23
 
+Proyecto realizado con Ruby 2.6.0 y rails 5.2.6
+
+
+
+
+
+
+
+
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
